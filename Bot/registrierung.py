@@ -48,5 +48,21 @@ async def on_message(message):
                                    '$help zeigt diese Hilfe an.')
 
 
+def main():
+    @client.event
+    async def on_ready():
+        global g
+        print("Bot is ready!")
+        print("Logged in as: " + client.user.name)
+        print("Bot ID: " + str(client.user.id))
+        for guild in client.guilds:
+            print("Connected to server: {}".format(guild))
+        print("------")
+        client.loop.create_task(status_task())
+
+if __name__ == '__main__':
+    main()
+
+
 client.run('')
 
