@@ -31,7 +31,7 @@ async def on_member_join(member: discord.Member):
     channel = client.get_channel(905056217595002891)
     if member.guild.id == 904846660256022579:
         await member.add_roles(role)
-        await channel.send(f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel SpaÃŸ!')
+        await channel.send(f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel Spaß!')
 
 
 @client.event
@@ -49,3 +49,4 @@ async def on_message(message):
 
 
 client.run('')
+

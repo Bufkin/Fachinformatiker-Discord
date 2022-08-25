@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Start">
-      <change afterPath="$PROJECT_DIR$/Bot/registrierung.py" afterDir="false" />
+    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Merge remote-tracking branch 'Fachinformatiker-Discord/master'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bot/registrierung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/registrierung.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661452019650</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Erste Befehel Info, Log und zur Standartgruppe befödern.">
+      <created>1661454719845</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661454719845</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'Fachinformatiker-Discord/master'">
+      <created>1661454810538</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661454810538</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -204,7 +219,9 @@
     <MESSAGE value="Create Repo" />
     <MESSAGE value="Merge pull request #1 from Taracraft/Taracraft-patch-1&#10;&#10;abhaenigkeit.yml" />
     <MESSAGE value="Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start" />
+    <MESSAGE value="Erste Befehel Info, Log und zur Standartgruppe befödern." />
+    <MESSAGE value="Merge remote-tracking branch 'Fachinformatiker-Discord/master'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'Fachinformatiker-Discord/master'" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
