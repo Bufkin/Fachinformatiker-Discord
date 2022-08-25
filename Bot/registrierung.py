@@ -48,4 +48,4 @@ async def on_message(message):
                                    '$help zeigt diese Hilfe an.')
 
 
-client.run('MTAxMjQzMDI5MDA4MzQwMTczOA.Gt3S7m.R3NA31EEJqQeJ2jolBuw8k-bpoOopaREU1A0ko')
+client.run('')
