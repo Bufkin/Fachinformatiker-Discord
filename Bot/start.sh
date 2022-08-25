@@ -1,0 +1,1 @@
+screen -dmS dcfibot python3.9 /home/git/Fachinformatiker-Discord/Bot/registrierung.py
