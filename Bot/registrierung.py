@@ -79,7 +79,7 @@ async def on_reaction_add(reaction, member):
         await member.add_roles(role)
 
 @client.event
-async def on_reaction_remove(reaction, user):
+async def on_reaction_remove(reaction, member):
     Channel = client.get_channel(905056217595002891)
     if reaction.message.channel.id != Channel.id:
         return
