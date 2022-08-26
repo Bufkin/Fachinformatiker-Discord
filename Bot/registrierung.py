@@ -35,7 +35,7 @@ async def on_member_join(member: discord.Member):
     channel = client.get_channel(905056217595002891)
     if member.guild.id == 904846660256022579:
         await member.add_roles(role)
-        await channel.send(f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel SpaÃŸ!')
+        await channel.send(f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel SpaÃƒÅ¸!')
 
 
 @client.event
@@ -47,15 +47,37 @@ async def on_message(message):
     if message.content.lower() == "!help":
         await message.channel.send('**Hilfe zum Fachinformatiker-Bot**\n\n'
                                    '$help zeigt diese Hilfe an.')
+
 @client.event
-async def on_reaction_add(reaction, user):
+async def on_reaction_add(reaction, member):
     Channel = client.get_channel(905056217595002891)
     if reaction.message.channel.id != Channel.id:
         return
-    if reaction.emoji == ":desktop:":
-      if member.guild.id == 904846660256022579:
+    if reaction.emoji == '\N{keyboard}':
+        role = discord.utils.get(member.guild.roles, name="FIDV")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{telescope}':
+        role = discord.utils.get(member.guild.roles, name="FIDV-Azubi")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{wrench}':
+        role = discord.utils.get(member.guild.roles, name="FIDP-Azubi")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{screwdriver}':
+        role = discord.utils.get(member.guild.roles, name="FIDP")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{ticket}':
+        role = discord.utils.get(member.guild.roles, name="FIAE-Azubi")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{Notebook}':
+        role = discord.utils.get(member.guild.roles, name="FIAE")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{Personal Computer}':
+        role = discord.utils.get(member.guild.roles, name="FISI-Azubi")
+        await member.add_roles(role)
+    if reaction.emoji == '\N{Desktop Computer}':
         role = discord.utils.get(member.guild.roles, name="FISI")
         await member.add_roles(role)
+
 
 def main():
     @client.event
@@ -71,16 +93,30 @@ def main():
         channels = client.get_channel(905056217595002891)
         print('Clearing messages...')
         await channels.purge(limit=1000)
-        embed = discord.Embed(title='W�hle die Fachrichtung deines Fachinformatikers!',
+        embed = discord.Embed(title='Wähle die Fachrichtung deines Fachinformatikers!',
                                           description='Auswahl des Fachbereiches')
-        embed.add_field(name='Systemintegeration', value=':desktop:', inline=True)
-        emoji = ':computer:'
-        embed.add_field(name='Anwendungsentwicklung', value='2', inline=True)
-        embed.add_field(name='Digitale Vernetzung', value='3', inline=True)
-        embed.add_field(name='Daten- und Prozessanalyse', value='4', inline=True)
+        embed.add_field(name='Systemintegeration', value='\N{Desktop Computer}', inline=True)
+        embed.add_field(name='Systemintegeration-Azubi', value='\N{Personal Computer}', inline=True)
+        embed.add_field(name='Anwendungsentwicklung', value='\N{Notebook}', inline=True)
+        embed.add_field(name='Anwendungsentwicklung-Azubi', value='\N{ticket}', inline=True)
+        embed.add_field(name='Digitale Vernetzung', value='\N{screwdriver}', inline=True)
+        embed.add_field(name='Digitale Vernetzung-Azubi', value='\N{wrench}', inline=True)
+        embed.add_field(name='Daten- und Prozessanalyse', value='\N{keyboard}', inline=True)
+        embed.add_field(name='Daten- und Prozessanalyse-Azubi', value='\N{telescope}', inline=True)
         embed.set_footer(text='Auswahl ist erforderlich')
         mess = await channels.send(embed=embed)
         await mess.add_reaction('\N{Desktop Computer}')
+        await mess.add_reaction('\N{Personal Computer}')
+        await mess.add_reaction('\N{Notebook}')
+        await mess.add_reaction('\N{ticket}')
+        await mess.add_reaction('\N{screwdriver}')
+        await mess.add_reaction('\N{wrench}')
+        await mess.add_reaction('\N{keyboard}')
+        await mess.add_reaction('\N{telescope}')
+
+
+        
+
 
 
 if __name__ == '__main__':
