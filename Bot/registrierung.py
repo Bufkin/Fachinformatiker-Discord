@@ -78,6 +78,35 @@ async def on_reaction_add(reaction, member):
         role = discord.utils.get(member.guild.roles, name="FISI")
         await member.add_roles(role)
 
+@client.event
+async def on_reaction_remove(reaction, user):
+    Channel = client.get_channel(905056217595002891)
+    if reaction.message.channel.id != Channel.id:
+        return
+    if reaction.emoji == '\N{keyboard}':
+        role = discord.utils.get(member.guild.roles, name="FIDV")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{telescope}':
+        role = discord.utils.get(member.guild.roles, name="FIDV-Azubi")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{wrench}':
+        role = discord.utils.get(member.guild.roles, name="FIDP-Azubi")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{screwdriver}':
+        role = discord.utils.get(member.guild.roles, name="FIDP")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{ticket}':
+        role = discord.utils.get(member.guild.roles, name="FIAE-Azubi")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{Notebook}':
+        role = discord.utils.get(member.guild.roles, name="FIAE")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{Personal Computer}':
+        role = discord.utils.get(member.guild.roles, name="FISI-Azubi")
+        await member.remove_roles(role)
+    if reaction.emoji == '\N{Desktop Computer}':
+        role = discord.utils.get(member.guild.roles, name="FISI")
+        await member.remove_roles(role)
 
 def main():
     @client.event
