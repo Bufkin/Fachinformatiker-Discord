@@ -1,11 +1,8 @@
 # -*- coding: iso-8859-1 -*-
 import asyncio
+import logging.handlers
+
 import discord
-import datetime
-import logging
-import discord_emoji
-from discord import Member, channel, message
-from discord.ext.commands import MissingPermissions, bot, has_permissions
 
 intents = discord.Intents.all()
 intents.members = True
@@ -14,16 +11,26 @@ intents.presences = True
 client = discord.Client(intents=discord.Intents.all())
 g = client.get_guild(904846660256022579)
 logger = logging.getLogger('discord')
-logger.setLevel(logging.INFO)
-handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+logger.setLevel(logging.DEBUG)
+logging.getLogger('discord.http').setLevel(logging.INFO)
+
+handler = logging.handlers.RotatingFileHandler(
+    filename='discord.log',
+    encoding='utf-8',
+    maxBytes=32 * 1024 * 1024,  # 32 MiB
+    backupCount=5,  # Rotate through 5 files
+)
+dt_fmt = '%Y-%m-%d %H:%M:%S'
+formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', dt_fmt, style='{')
+handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 
 @client.event
 async def status_task():
     while True:
-        await client.change_presence(activity=discord.Game('https://www.fachinformatiker.de'), status=discord.Status.online)
+        await client.change_presence(activity=discord.Game('https://www.fachinformatiker.de'),
+                                     status=discord.Status.online)
         await asyncio.sleep(10)
         await client.change_presence(activity=discord.Game('User-Bot'), status=discord.Status.online)
         await asyncio.sleep(5)
@@ -35,7 +42,8 @@ async def on_member_join(member: discord.Member):
     channel = client.get_channel(905056217595002891)
     if member.guild.id == 904846660256022579:
         await member.add_roles(role)
-        await channel.send(f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel SpaÃƒÅ¸!')
+        await channel.send(
+            f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel Spa�?Ÿ!')
 
 
 @client.event
@@ -47,6 +55,7 @@ async def on_message(message):
     if message.content.lower() == "!help":
         await message.channel.send('**Hilfe zum Fachinformatiker-Bot**\n\n'
                                    '$help zeigt diese Hilfe an.')
+
 
 @client.event
 async def on_reaction_add(reaction, member):
@@ -78,6 +87,7 @@ async def on_reaction_add(reaction, member):
         role = discord.utils.get(member.guild.roles, name="FISI")
         await member.add_roles(role)
 
+
 @client.event
 async def on_reaction_remove(reaction, member):
     Channel = client.get_channel(905056217595002891)
@@ -108,6 +118,7 @@ async def on_reaction_remove(reaction, member):
         role = discord.utils.get(member.guild.roles, name="FISI")
         await member.remove_roles(role)
 
+
 def main():
     @client.event
     async def on_ready():
@@ -122,8 +133,8 @@ def main():
         channels = client.get_channel(905056217595002891)
         print('Clearing messages...')
         await channels.purge(limit=1000)
-        embed = discord.Embed(title='Wähle die Fachrichtung deines Fachinformatikers!',
-                                          description='Auswahl des Fachbereiches')
+        embed = discord.Embed(title='W�hle die Fachrichtung deines Fachinformatikers!',
+                              description='Auswahl des Fachbereiches')
         embed.add_field(name='Systemintegeration', value='\N{Desktop Computer}', inline=True)
         embed.add_field(name='Systemintegeration-Azubi', value='\N{Personal Computer}', inline=True)
         embed.add_field(name='Anwendungsentwicklung', value='\N{Notebook}', inline=True)
@@ -142,10 +153,6 @@ def main():
         await mess.add_reaction('\N{wrench}')
         await mess.add_reaction('\N{keyboard}')
         await mess.add_reaction('\N{telescope}')
-
-
-        
-
 
 
 if __name__ == '__main__':
