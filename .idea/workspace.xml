@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Rollencheck hinzugefügt" />
+    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Rollencheck hinzugefügt">
+      <change beforePath="$PROJECT_DIR$/Bot/rollencheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/rollencheck.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -263,7 +265,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662201253788</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Rollencheck hinzugefügt">
+      <created>1662201388125</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1662201388125</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Rollencheck hinzugefügt">
+      <created>1662201552341</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1662201552341</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">

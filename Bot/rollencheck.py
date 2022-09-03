@@ -27,7 +27,7 @@ async def status_task():
                         created = member.joined_at
                         now = datetime.datetime.today().replace(tzinfo=pytz.UTC)
                         join_und_7_tage = created + datetime.timedelta(days=7)
-                        if join_und_7_tage > now:
+                        if join_und_7_tage < now:
                             print(f"Benutzer gefunden {member.name:s}")
                             userid = member.id
                             getuser = guild.get_member(userid)
