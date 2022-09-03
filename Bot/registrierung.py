@@ -171,7 +171,6 @@ def main():
         await mess.add_reaction('\N{keyboard}')
         await mess.add_reaction('\N{telescope}')
 
-
 if __name__ == '__main__':
     main()
 
