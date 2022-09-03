@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Rollencheck hinzugefügt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bot/registrierung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/registrierung.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bot/rollencheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/rollencheck.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,14 +61,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Eigene/Documents/GitHub/Fachinformatiker-Discord&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "F:/Eigene/Documents/GitHub/Bad-Timing/CMS/funktionen/funktion.js",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="Python" is-module-sdk="true">
@@ -279,7 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662201552341</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Rollencheck hinzugefügt">
+      <created>1662201918448</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1662201918448</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Rollencheck hinzugefügt">
+      <created>1662202049514</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1662202049514</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
