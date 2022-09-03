@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Merge remote-tracking branch 'Fachinformatiker-Discord/master'">
-      <change afterPath="$PROJECT_DIR$/Bot/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Bot/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bot/registrierung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/registrierung.py" afterDir="false" />
-    </list>
+    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Rollencheck hinzugefügt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -243,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661454810538</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Rollencheck hinzugefügt">
+      <created>1662201253788</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662201253788</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -271,7 +269,8 @@
     <MESSAGE value="Start" />
     <MESSAGE value="Erste Befehel Info, Log und zur Standartgruppe befödern." />
     <MESSAGE value="Merge remote-tracking branch 'Fachinformatiker-Discord/master'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'Fachinformatiker-Discord/master'" />
+    <MESSAGE value="Rollencheck hinzugefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rollencheck hinzugefügt" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

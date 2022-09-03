@@ -42,11 +42,6 @@ async def status_task():
                                             inline=False)
                             await getuser.send(embed=embed)
                             await getuser.kick(reason='')
-
-
-
-
-
 def main():
     @client.event
     async def on_ready():
@@ -56,4 +51,4 @@ if __name__ == '__main__':
     main()
 
 
-client.run('MTAxNTI5NTczMjE0MTUzNTIzMg.G1oQAn.yZGqvNSniE79b2sO4eQ2i6jyWT9a2LABCTmB74')
+client.run('')
