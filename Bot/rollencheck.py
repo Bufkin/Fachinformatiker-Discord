@@ -59,4 +59,4 @@ if __name__ == '__main__':
     main()
 
 
-client.run('MTAxNTI5NTczMjE0MTUzNTIzMg.GYhu-6.kJYpFyJYlOPH6KjiitpU9UhdyLWfP0tKiPyFMQ')
+client.run('')
