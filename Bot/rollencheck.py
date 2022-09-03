@@ -27,7 +27,7 @@ async def status_task():
                         created = member.joined_at
                         now = datetime.datetime.today().replace(tzinfo=pytz.UTC)
                         join_und_7_tage = created + datetime.timedelta(days=7)
-                        if join_und_7_tage > now:
+                        if join_und_7_tage < now:
                             print(f"Benutzer gefunden {member.name:s}")
                             userid = member.id
                             getuser = guild.get_member(userid)
@@ -38,7 +38,7 @@ async def status_task():
                                                   color=0xbd2e2e)
                             embed.set_author(name="Fachinformatiker-Discord")
                             embed.add_field(name="Hinweiß",
-                                            value="Gerne kansnt du wieder uns joinen, aber wähle eine Rolle innerhalb von 7 Tagen aus. https://discord.gg/DYxRQgwKE4",
+                                            value="Du kannst wieder joinen, aber wähle eine Rolle innerhalb von 7 Tagen aus. https://discord.gg/DYxRQgwKE4",
                                             inline=False)
                             await getuser.send(embed=embed)
                             await getuser.kick(reason='')
