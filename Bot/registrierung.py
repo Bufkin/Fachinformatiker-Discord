@@ -25,7 +25,6 @@ formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', 
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
-
 @client.event
 async def status_task():
     while True:
@@ -43,7 +42,8 @@ async def on_member_join(member: discord.Member):
     if member.guild.id == 904846660256022579:
         await member.add_roles(role)
         await channel.send(
-            f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel Spa߸!')
+            f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel Spa߸!'
+            f'\n Bitte denk dran dir in dem Channel : <#905056217595002891> eine Rolle auszuw�hlen. ')
 
 
 @client.event
