@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Korregierung Regestrierung">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread">
       <change beforePath="$PROJECT_DIR$/Bot/registrierung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/registrierung.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bot/rollencheck.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/rollencheck.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665053970860</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread">
+      <created>1668287014715</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1668287014715</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -373,7 +378,8 @@
     <MESSAGE value="Test-Commit" />
     <MESSAGE value="Korregierung Reg Bot" />
     <MESSAGE value="Korregierung Regestrierung" />
-    <option name="LAST_COMMIT_MESSAGE" value="Korregierung Regestrierung" />
+    <MESSAGE value="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

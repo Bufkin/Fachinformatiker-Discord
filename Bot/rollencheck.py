@@ -47,7 +47,7 @@ async def status_task():
                             userid = member.id
                             getuser = guild.get_member(userid)
                             channel = client.get_channel(1012434714293968926)
-                            await channel.send(f"{member.name} hat die {role.name} Role seit 7 tagen und wird gekickt")
+                            await channel.send(f"{member.mention} hat die {role.name} Role seit 7 tagen und wird gekickt")
                             embed = discord.Embed(title="Kick",
                                                   description="Du wurdest gekickt weil du keine Rolle in Channel: <#905056217595002891> ausgewählt hast.",
                                                   color=0xbd2e2e)
