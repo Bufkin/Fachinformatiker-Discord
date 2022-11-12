@@ -43,7 +43,7 @@ async def on_member_join(member: discord.Member):
     await channel.send(f"{member.mention} hat die {role.name} Role zugewiesen bekommen, und wurde per DM begrüßt")
     embed = discord.Embed(title="Willkommen auf dem Fachinformatiker Discord.",
                           description="Wichtige Infos für die Benutzung des Discord.", color=0x8b6f6f)
-    embed.add_field(name="Bitte wähle in <#905056217595002891> Deine Fachrichtung!",
+    embed.add_field(name="Bitte wähle in #willkommenn-welcome Deine Fachrichtung!",
                     value="Falls du dies nicht innerhalb von 7 Tagen dies machst, wirst du Entfernt.", inline=False)
     embed.add_field(name="Eine Neuer Join ist jedoch möglich.",
                     value="Für weitere Fragen zögere nicht die Admins zu Kontaktieren", inline=False)

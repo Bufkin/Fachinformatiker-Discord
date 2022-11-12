@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread">
-      <change beforePath="$PROJECT_DIR$/Bot/registrierung.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bot/registrierung.py" afterDir="false" />
-    </list>
+    <list default="true" id="fbee225f-4986-462b-ac60-f33cb1be2bea" name="Changes" comment="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -343,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668287014715</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Korregierung Regestrierung, Direktmessage zu Neuen Personen + Log Channel im Admin Bereich, anstatt zuspammen des Willkommens Thread">
+      <created>1668287808134</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1668287808134</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
