@@ -38,14 +38,18 @@ async def status_task():
 @client.event
 async def on_member_join(member: discord.Member):
     role = discord.utils.get(member.guild.roles, name="-undefined-")
-    channel = client.get_channel(905056217595002891)
-    if member.guild.id == 904846660256022579:
-        await member.add_roles(role)
-        await channel.send(
-            f'**Hey! {member.name}**\n Willkommen auf dem Discord Server von Fachinformatiker! \n Viel Spaß¸!'
-            f'\n Bitte denk dran dir in dem Channel : <#905056217595002891> eine Rolle auszuwählen. ')
-
-
+    await member.add_roles(role)
+    channel = client.get_channel(1012434714293968926)
+    await channel.send(f"{member.name} hat die {role.name} Role zugewiesen bekommen, und wurde per DM begrüßt")
+    embed = discord.Embed(title="Willkommen auf dem Fachinformatiker Discord.",
+                          description="Wichtige Infos für die Benutzung des Discord.", color=0x8b6f6f)
+    embed.add_field(name="Bitte wähle in <#905056217595002891> Deine Fachrichtung!", value="", inline=False)
+    embed.add_field(name="Falls du dies nicht innerhalb von 7 Tagen dies machst, wirst du Entfernt.", value="",
+                    inline=False)
+    embed.add_field(name="Eine Neuer Join ist jedoch möglich.", value="", inline=True)
+    embed.add_field(name="Für weitere Fragen zögere nicht die Admins zu Kontaktieren", value="", inline=True)
+    embed.set_footer(text="by Taracraft")
+    await member.send(embed=embed)
 @client.event
 async def on_message(message):
     global g
