@@ -47,7 +47,7 @@ async def on_member_join(member: discord.Member):
                     value="Falls du dies nicht innerhalb von 7 Tagen dies machst, wirst du Entfernt.", inline=False)
     embed.add_field(name="Eine Neuer Join ist jedoch möglich.",
                     value="Für weitere Fragen zögere nicht die Admins zu Kontaktieren", inline=False)
-    embed.set_footer(text="by Taracraft")
+    embed.set_footer(text="by Thomas(Taracraft#0762)")
     await member.send(embed=embed)
 @client.event
 async def on_message(message):
