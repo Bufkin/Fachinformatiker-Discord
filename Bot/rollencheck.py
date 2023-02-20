@@ -1,4 +1,3 @@
-# -*- coding: iso-8859-1 -*-
 import asyncio
 import datetime as datetime
 import logging.handlers
@@ -26,13 +25,10 @@ formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', 
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
-@client.event
-async def status_task():
-    while True:
-        await client.change_presence(activity=discord.Game('https://www.fachinformatiker.de'), status=discord.Status.online)
-        await asyncio.sleep(5)
-        await client.change_presence(activity=discord.Game('Rollen-Check'), status=discord.Status.online)
-        await asyncio.sleep(5)
+
+async def check_roles():
+    await client.wait_until_ready()
+    while not client.is_closed():
         for guild in client.guilds:
             for member in guild.members:
                 for role in member.roles:
@@ -57,13 +53,23 @@ async def status_task():
                                             inline=False)
                             await getuser.send(embed=embed)
                             await getuser.kick(reason='')
+        await asyncio.sleep(60 * 60 * 24)
+
+
+async def update_presence():
+    await client.wait_until_ready()
+    while not client.is_closed():
+        await client.change_presence(activity=discord.Game('https://www.fachinformatiker.de'), status=discord.Status.online)
+        await asyncio.sleep(5)
+        await client.change_presence(activity=discord.Game('Rollen-Check'), status=discord.Status.online)
+        await asyncio.sleep(5)
+
+
 def main():
-    @client.event
-    async def on_ready():
-        client.loop.create_task(status_task())
+    client.loop.create_task(check_roles())
+    client.loop.create_task(update_presence())
+
 
 if __name__ == '__main__':
     main()
-
-
-client.run('')
+    client.run('TOKEN')
