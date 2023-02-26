@@ -1,3 +1,4 @@
+# -*- coding: iso-8859-1 -*-
 import asyncio
 import datetime as datetime
 import logging.handlers
@@ -65,11 +66,12 @@ async def update_presence():
         await asyncio.sleep(5)
 
 
-def main():
+async def main():
+    await client.wait_until_ready()
     client.loop.create_task(check_roles())
     client.loop.create_task(update_presence())
 
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
     client.run('TOKEN')
