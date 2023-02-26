@@ -10,7 +10,7 @@ intents = discord.Intents.all()
 intents.members = True
 intents.messages = True
 intents.presences = True
-client = discord.Client(intents=discord.Intents.all())
+client = discord.Client(intents=intents)
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 logging.getLogger('discord.http').setLevel(logging.INFO)
@@ -26,10 +26,8 @@ formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', 
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
-
+@client.event
 async def check_roles():
-    await client.wait_until_ready()
-    while not client.is_closed():
         for guild in client.guilds:
             for member in guild.members:
                 for role in member.roles:
@@ -56,10 +54,8 @@ async def check_roles():
                             await getuser.kick(reason='')
         await asyncio.sleep(60 * 60 * 24)
 
-
+@client.event
 async def update_presence():
-    await client.wait_until_ready()
-    while not client.is_closed():
         await client.change_presence(activity=discord.Game('https://www.fachinformatiker.de'), status=discord.Status.online)
         await asyncio.sleep(5)
         await client.change_presence(activity=discord.Game('Rollen-Check'), status=discord.Status.online)
@@ -67,11 +63,19 @@ async def update_presence():
 
 
 async def main():
-    await client.wait_until_ready()
-    client.loop.create_task(check_roles())
-    client.loop.create_task(update_presence())
+    @client.event
+    async def on_ready():
+        print("Bot is ready!")
+        print("Logged in as: " + client.user.name)
+        print("Bot ID: " + str(client.user.id))
+        for guild in client.guilds:
+            print("Connected to server: {}".format(guild))
+        print("------")
 
+        print("Starting up...")
+        await client.loop.create_task(update_presence())
+        await client.loop.create_task(check_roles())
 
 if __name__ == '__main__':
     asyncio.run(main())
-    client.run('TOKEN')
+    client.run('')
