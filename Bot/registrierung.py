@@ -1,4 +1,5 @@
-# -*- coding: iso-8859-1 -*-
+#! /usr/bin/env/python311
+
 import asyncio
 import logging.handlers
 
@@ -21,9 +22,11 @@ handler = logging.handlers.RotatingFileHandler(
     backupCount=5,  # Rotate through 5 files
 )
 dt_fmt = '%Y-%m-%d %H:%M:%S'
-formatter = logging.Formatter('[{asctime}] [{levelname:<8}] {name}: {message}', dt_fmt, style='{')
+formatter = logging.Formatter(
+    '[{asctime}] [{levelname:<8}] {name}: {message}', dt_fmt, style='{')
 handler.setFormatter(formatter)
 logger.addHandler(handler)
+
 
 @client.event
 async def status_task():
@@ -40,15 +43,17 @@ async def on_member_join(member: discord.Member):
     role = discord.utils.get(member.guild.roles, name="-undefined-")
     await member.add_roles(role)
     channel = client.get_channel(1012434714293968926)
-    await channel.send(f"{member.mention} hat die {role.name} Role zugewiesen bekommen, und wurde per DM begrüßt")
+    await channel.send(f"{member.mention} hat die {role.name} Role zugewiesen bekommen, und wurde per DM begrÃ¼ÃŸt")
     embed = discord.Embed(title="Willkommen auf dem Fachinformatiker Discord.",
-                          description="Wichtige Infos für die Benutzung des Discord.", color=0x8b6f6f)
-    embed.add_field(name="Bitte wähle in #willkommenn-welcome Deine Fachrichtung!",
+                          description="Wichtige Infos fÃ¼r die Benutzung des Discord.", color=0x8b6f6f)
+    embed.add_field(name="Bitte wÃ¤hle in #willkommenn-welcome Deine Fachrichtung!",
                     value="Falls du dies nicht innerhalb von 7 Tagen dies machst, wirst du Entfernt.", inline=False)
-    embed.add_field(name="Eine Neuer Join ist jedoch möglich.",
-                    value="Für weitere Fragen zögere nicht die Admins zu Kontaktieren", inline=False)
+    embed.add_field(name="Eine Neuer Join ist jedoch mÃ¶glich.",
+                    value="FÃ¼r weitere Fragen zÃ¶gere nicht die Admins zu Kontaktieren", inline=False)
     embed.set_footer(text="by Thomas(Taracraft#0762)")
     await member.send(embed=embed)
+
+
 @client.event
 async def on_message(message):
     global g
@@ -139,6 +144,7 @@ async def on_reaction_remove(reaction, member):
         await member.remove_roles(role)
         await member.add_roles(undefined)
 
+
 def main():
     @client.event
     async def on_ready():
@@ -153,16 +159,24 @@ def main():
         channels = client.get_channel(905056217595002891)
         print('Clearing messages...')
         await channels.purge(limit=1000)
-        embed = discord.Embed(title='Wähle die Fachrichtung deines Fachinformatikers!',
+        embed = discord.Embed(title='WÃ¤hle die Fachrichtung deines Fachinformatikers!',
                               description='Auswahl des Fachbereiches')
-        embed.add_field(name='Systemintegeration', value='\N{Desktop Computer}', inline=True)
-        embed.add_field(name='Systemintegeration-Azubi', value='\N{Personal Computer}', inline=True)
-        embed.add_field(name='Anwendungsentwicklung', value='\N{Notebook}', inline=True)
-        embed.add_field(name='Anwendungsentwicklung-Azubi', value='\N{ticket}', inline=True)
-        embed.add_field(name='Digitale Vernetzung', value='\N{screwdriver}', inline=True)
-        embed.add_field(name='Digitale Vernetzung-Azubi', value='\N{wrench}', inline=True)
-        embed.add_field(name='Daten- und Prozessanalyse', value='\N{keyboard}', inline=True)
-        embed.add_field(name='Daten- und Prozessanalyse-Azubi', value='\N{telescope}', inline=True)
+        embed.add_field(name='Systemintegeration',
+                        value='\N{Desktop Computer}', inline=True)
+        embed.add_field(name='Systemintegeration-Azubi',
+                        value='\N{Personal Computer}', inline=True)
+        embed.add_field(name='Anwendungsentwicklung',
+                        value='\N{Notebook}', inline=True)
+        embed.add_field(name='Anwendungsentwicklung-Azubi',
+                        value='\N{ticket}', inline=True)
+        embed.add_field(name='Digitale Vernetzung',
+                        value='\N{screwdriver}', inline=True)
+        embed.add_field(name='Digitale Vernetzung-Azubi',
+                        value='\N{wrench}', inline=True)
+        embed.add_field(name='Daten- und Prozessanalyse',
+                        value='\N{keyboard}', inline=True)
+        embed.add_field(name='Daten- und Prozessanalyse-Azubi',
+                        value='\N{telescope}', inline=True)
         embed.set_footer(text='Auswahl ist erforderlich')
         mess = await channels.send(embed=embed)
         await mess.add_reaction('\N{Desktop Computer}')
@@ -173,6 +187,7 @@ def main():
         await mess.add_reaction('\N{wrench}')
         await mess.add_reaction('\N{keyboard}')
         await mess.add_reaction('\N{telescope}')
+
 
 if __name__ == '__main__':
     main()
