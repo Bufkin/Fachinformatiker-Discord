@@ -1,5 +1,5 @@
-brotli==1.0.9
-ConfigParser==5.3.0
+brotli==1.1.0
+ConfigParser==6.0.0
 cryptography==39.0.1
 Cython==0.29.32
 discord.py==2.0.0
